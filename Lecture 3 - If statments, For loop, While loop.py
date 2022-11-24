@@ -85,73 +85,6 @@ for x in nums:
 
 print(uniques)
 
-#HW
-#Question
-#1.What is the fifteenth letter of the alphabet?
-#2.What is the code for the twenty third letter of the alphabet?
-#3.What is the fourth letter of the code for the eighth letter of the alphabet?
-Alphabet =  [["A", "Alfa"],
-             ["B", "Bravo"],
-             ["C", "Charlie"],
-             ["D", "Delta"],
-             ["E","Echo"],
-             ["F", "Foxtrot"],
-             ["G", "Golf"],
-             ["H", "Hotel"],
-             ["I", "India"],
-             ["J", "Juliett"],
-             ["K", "Kilo"],
-             ["L", "Lima"],
-             ["M", "Mike"],
-             ["N", "November"],
-             ["O", "Oscar"],
-             ["P", "Papa"],
-             ["Q", "Quebe"],
-             ["R", "Romeo"],
-             ["S", "Sierra"],
-             ["T", "Tango"],
-             ["U", "Uniform"],
-             ["V", "Victor"],
-             ["W", "Whiskey"],
-             ["X", "X ray"],
-             ["Y", "Yankee"],
-             ["Z", "Zulu"]]
-# 1. 15th letter is: O, Oscar
-print(Alphabet[14][0])
-#2. Code for the twenty third letter of the alphabet is: Whiskey
-print(Alphabet[22][1])
-#3. 4th letter of the code for the eighth letter of the alphabet is: e
-print(Alphabet[7][1][3])
-
-#Question 4. Create a Python script that to Convert a given tuple of positive integers into an integer
-nums=(1,2,3)
-combine = nums[0]*100+nums[1]*10+nums[2]
-print(combine)
-
-#Question 5. Create a Python script that change the first element in a tuple
-x = ("apple", "banana", "cherry")
-y = list(x)
-y[0]="kiwi"
-x=tuple(y)
-print(x)
-
-#Question 6. Create a Python script that combine values in python list of dictioneries.
-#Results1
-item_list = [{'item': 'item 1 ', 'amount': 400 }, {'item': 'item 2 ', 'amount': 300}]
-items = {}
-item_1={item_list[0]['item']:item_list[0]['amount']}
-item_2={item_list[1]['item']:item_list[1]['amount']}
-items.update(item_1)
-items.update(item_2)
-print(items)
-#Results2
-result={}
-first_item=list(item_list[0].values())
-second_list=list(item_list[1].values())
-result.update({first_item[0]: first_item[1]})
-result.update({second_list[0]:second_list[1]})
-print(result)
-
 #Factorial
 n=int(input("...?"))
 fact = 1
@@ -205,7 +138,7 @@ def Boom(start, boom):
         print(start)
      start += 1
 
-Boom(1, 3)
+Boom(1, 7)
 
 #Exercise 3. Create a python script to calculate the deposit in 10 years: deposit*(1+rate)
 year = 2022
