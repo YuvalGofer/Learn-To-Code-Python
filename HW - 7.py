@@ -3,6 +3,8 @@
 #HW 1. Create a Python script that take a list of dictionaries and create an excel file that
 #including the id ,Date and S_Id columns by the dictionary's keys(use the .item() to extract
 #the values from the dictionaries)
+import pandas as pd
+
 Data=[{'id': '934', 'Date': '2022-04-13 ', 'S_Id': '5219', 'Lead_num':'62'},
 {'id': '935', 'Date': '2022-04-04 ', 'S_Id': '25256', 'Lead_num':'93'},
 {'id': '936', 'Date': '2022-04-13 ', 'S_Id': '25338', 'Lead_num':'11'},
@@ -33,3 +35,38 @@ Data=[{'id': '934', 'Date': '2022-04-13 ', 'S_Id': '5219', 'Lead_num':'62'},
 {'id': '962', 'Date': '2022-04-07 ', 'S_Id': '566970', 'Lead_num':'03'},
 {'id': '963',  'Date': '2022-04-12 ', 'S_Id': '164899', 'Lead_num':'74'}]
 
+Data[1].items()
+
+Id = []
+Date = []
+S_Id = []
+
+for dict in Data:
+    for key, value in dict.items():
+        if key == 'id':
+            Id.append(value)
+        elif key == 'Date':
+            Date.append(value)
+        elif key == 'S_Id':
+            S_Id.append(value)
+
+
+df = pd.DataFrame([Id[0:len(Id)], Date[0:len(Date)], S_Id[0:len(S_Id)]],
+                  index=['Id', 'Date', 'S_Id'],
+                  columns=range(1, len(S_Id) + 1))
+
+df.to_excel('HW.xlsx',index=False)
+
+df2 = df.T
+
+df2.to_excel('HW.xlsx',index=False)
+
+print("End")
+
+#---Easy way
+
+df = pd.DataFrame(Data)
+
+df.to_excel('HW1.xlsx',index=False)
+
+print("End")
