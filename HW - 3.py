@@ -41,3 +41,14 @@ for letter in names:
 
 print(count2)
 print(nameM)
+
+#HW 4. Create a Python script to calculate to price of Apple, Milk and Meat
+
+Supermerket_list ={"Apple": 10 ,"Egg": 5 ,"Milk": 5 ,"Meat": 3 ,"Bread": 20}
+Bill=[]
+list=["Apple", "Egg","Bread"]
+for key, value in Supermerket_list.items():
+    if key in list:
+        Bill.append(value)
+
+print(sum(Bill))
