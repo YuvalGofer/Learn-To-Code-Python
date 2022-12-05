@@ -95,6 +95,17 @@ while i<=n:
     print(i)
 print(n, "!=", fact)
 
+#Factorial2
+def factorial(n):
+    fact = 1
+    for i in range(1,n+1):
+        print(i)
+        fact *=i
+        print(fact)
+    return fact
+
+print("7!= ", factorial(7))
+
 #Attention!! infinity loop
 i=1
 while i<4:
@@ -128,7 +139,7 @@ while True:
         else:
             print(a)
     break
-#Function result
+#Function result for 7 boom
 def Boom(start, boom):
 
   while start <= 21:
@@ -138,7 +149,8 @@ def Boom(start, boom):
         print(start)
      start += 1
 
-Boom(1, 7)
+Boom(1, 4)
+
 
 #Exercise 3. Create a python script to calculate the deposit in 10 years: deposit*(1+rate)
 year = 2022
@@ -150,3 +162,47 @@ while counter <= year + period:
     deposit = round(deposit*(1+rate),3)
     print(str(counter), ': ', str(deposit))
     counter += 1
+
+#Hands on
+#Exe 1. Python func to check wether a number falls in a given range
+def testRange(a,b,c):
+    if a in range(b,c+1):
+        print(a, "Is in the range!")
+    else:
+        print(a, "Is not in the range")
+
+print(testRange(8, 1, 9))
+
+#Exe 2. Python func that takes a number as a parameter and check if prime or not
+def prime(n):
+    if (n==1):
+        return False
+    elif (n==2):
+        return True
+    else:
+     for x in range(2, n):
+        if (n % x==0):
+              return False
+        return True
+
+print(prime(20))
+
+#Exe 3. Python func to reverse a string
+def testString(str):
+    return str[::-1]
+
+print(testString("Yuval"))
+
+#Solution2 for exe 3.
+def testReverseString(str):
+    str2=''
+    index=len(str)
+    while index > 0:
+        str2 += str[index-1]
+        # print(str2)
+        index=index-1
+        # print(index)
+    return  str2
+
+print(testReverseString("Yuval"))
+
